@@ -17,7 +17,7 @@ window.addEventListener('click', function (evt) {
         document.body.appendChild(img);
         document.body.insertBefore(img, document.body.firstChild);
         img.src = "https://github.com/rpelaez/caranchoa/raw/master/caranchoa1.png";
-        img.width= "150";
+        img.width= "600";
         document.onmousemove = updateAvatarPosition( evt, img)
         img.style.float= "left";
         img.style.position="relative"
@@ -28,14 +28,14 @@ window.addEventListener('click', function (evt) {
     	audioElement.currentTime = 0;
         audioElement.play();
         
-        sleep(100).then(() => {
+        sleep(400).then(() => {
         	img.remove();
         	img = document.createElement('img');
         	document.onmousemove = updateAvatarPosition( evt, img)
        		document.body.appendChild(img);
        		document.body.insertBefore(img, document.body.firstChild);
     		img.src = "https://github.com/rpelaez/caranchoa/raw/master/caranchoa2.png";
-    		img.width= "150";
+    		img.width= "600";
     		document.onmousemove = updateAvatarPosition( evt, img)
     		img.style.float= "left";
     		img.style.position="relative"
@@ -43,7 +43,7 @@ window.addEventListener('click', function (evt) {
     		
     		
     	});
-    	sleep(1000).then(() => {
+    	sleep(2000).then(() => {
     		img.remove();
     	});
     } 
