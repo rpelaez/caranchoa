@@ -15,11 +15,13 @@ window.addEventListener('click', function (evt) {
         var img = document.createElement('img');
         document.onmousemove = updateAvatarPosition( evt, img)
         document.body.appendChild(img);
+        document.body.insertBefore(img, document.body.firstChild);
         img.src = "https://github.com/rpelaez/caranchoa/raw/master/caranchoa1.png";
         img.width= "150";
+        document.onmousemove = updateAvatarPosition( evt, img)
         img.style.float= "left";
         img.style.position="relative"
-        img.style.top="100"
+        img.style.setProperty("display", "inline", "important")
         
         var audioElement = document.createElement('audio');
     	audioElement.setAttribute('src', 'https://github.com/rpelaez/caranchoa/raw/master/caranchoa.wav' );
@@ -31,11 +33,14 @@ window.addEventListener('click', function (evt) {
         	img = document.createElement('img');
         	document.onmousemove = updateAvatarPosition( evt, img)
        		document.body.appendChild(img);
+       		document.body.insertBefore(img, document.body.firstChild);
     		img.src = "https://github.com/rpelaez/caranchoa/raw/master/caranchoa2.png";
     		img.width= "150";
+    		document.onmousemove = updateAvatarPosition( evt, img)
     		img.style.float= "left";
     		img.style.position="relative"
-    		img.style.top="10"
+    		img.style.setProperty("display", "inline", "important")
+    		
     		
     	});
     	sleep(1000).then(() => {
